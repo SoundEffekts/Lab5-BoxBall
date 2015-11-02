@@ -1,6 +1,6 @@
 import java.awt.*;
 import java.awt.geom.*;
-import java.util.Random;
+import java.util.Random; //Import statements for the RNG/canvas inputs
 
 /**
  * Class BouncingBall - a graphical ball that works in conjuction withh the BallDemo class to create a
@@ -8,9 +8,9 @@ import java.util.Random;
  *
  * This movement can be initiated by repeated calls to the "move" method.
  * 
- * @authhor Edited by Chris Boardman
+ * @author Edited by Chris Boardman
  *
- * @version 2011.07.31
+ * @version 2015.11.2
  */
 
 public class BoxBall
@@ -26,7 +26,7 @@ public class BoxBall
     private int maxY;
     private int offset;
     /**
-     * Constructor for objects of class BouncingBall
+     * Constructor for objects of class BoxBall
      *
      * @param xPosition  the horizontal coordinate of the ball
      * @param yPosition  the vertical coordinate of the ball
@@ -37,6 +37,7 @@ public class BoxBall
      * @param xSpeed The X speed of the ball.
      * @param maxX The maximum pos that X can be in the box
      * @param maxY The maximum pos that X can be in the box
+     * @param offset The offset value for the box.
     */
    
     public BoxBall(int max_X, int max_Y ,int off ,Canvas box)
@@ -59,6 +60,7 @@ public class BoxBall
 
     /**
      * Draw this ball at its current position onto the canvas.
+     * 
      **/
     public void draw()
     {
@@ -79,7 +81,6 @@ public class BoxBall
      **/
     public void move()
     {
-        // remove from canvas at the current position
         erase();
         
         xPosition+=xSpeed;
@@ -114,6 +115,7 @@ public class BoxBall
 
     /**
      * return the horizontal position of this ball
+     * @return xPosition
      */
     public int getXPosition()
     {
@@ -122,6 +124,7 @@ public class BoxBall
 
     /**
      * return the vertical position of this ball
+     * @return yPosition
      */
     public int getYPosition()
     {
